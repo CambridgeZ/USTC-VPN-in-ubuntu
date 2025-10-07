@@ -1,4 +1,4 @@
-# USTC-VPN-in-ubuntu
+# USTC-VPN
 中科大(ustc)-openvpn-Ubuntu环境配置教程(丫的，我发到github上，不会被删了吧？不会吧？惊恐~)
 
 中科大(ustc)-openvpn-Ubuntu环境配置教程(删除后重置版)
@@ -6,7 +6,7 @@
 @[toc]
 ## 参考链接：
  http://openvpn.ustc.edu.cn/
- 
+
 ## Windows如何使用？
 
 Windows太简单了，直接看官网的教程就OK了~。
@@ -19,6 +19,21 @@ Windows太简单了，直接看官网的教程就OK了~。
 
 OK，然后在dianxin的配置文件中加上这段话，和Ubuntu的一样：
 auth-user-pass account
+
+## Mac 已经其他苹果设备如何使用？
+
+1. 在**系统设置**当中找到VPN
+2. 点击“+"创建新的VPN配置，在图中的三种VPN选项当中选择L2TP，随后进入设置界面
+3. 填写其中必要信息
+   + 显示名称随意填
+   + 配置选择**默认**
+   + 服务器地址**218.22.21.11**
+   + 账户名称填**网络通的账户名**
+   + 用户认证选择**密码**
+   + 密码填写**网络通账户的密码**
+   + 机器认证选择**共享密钥**
+   + 共享密钥请在信息中心相关网站查询
+4. 保存配置，完成连接。
 
 ## 关于申请账号
 如何申请账号只要是科大学籍的学生，尤其是联培的学生，应该都可以申请账号
@@ -90,7 +105,7 @@ openvpn.zip,下载后解压缩，假定解压缩文件夹为~/Downloads/openvpn�
     auth-user-pass account
     
     reneg-sec 360000x
-
+    
     ## - - -dianxin.ovpn over- - -
 
 ## 使用vpn
